@@ -22,11 +22,11 @@ This project aims to analyze Walmart's sales data using a comprehensive dataset 
 ## Objective
 The primary objective of this project is to analyze Walmart's sales data to identify patterns and trends that can inform strategic decisions. By analyzing this dataset, we aim to:
 
-• Understand customer behavior across different branches, cities, and product lines.
-• Identify top-performing branches and products.
-• Analyze the impact of pricing and customer demographics on sales and revenue.
-• Evaluate the effectiveness of different payment methods.
-• Provide actionable insights that can help Walmart optimize its inventory, pricing, and marketing strategies to increase profitability and customer satisfaction.
+- Understand customer behavior across different branches, cities, and product lines.
+* Identify top-performing branches and products.
++ Analyze the impact of pricing and customer demographics on sales and revenue.
+- Evaluate the effectiveness of different payment methods.
+* Provide actionable insights that can help Walmart optimize its inventory, pricing, and marketing strategies to increase profitability and customer satisfaction.
 
 ## Purpose
 The purpose of this analysis is to leverage Walmart's sales data to generate a clearer picture of its overall business performance and customer preferences. By providing detailed insights into sales trends, product demand, and customer segments, this project aims to help Walmart:
