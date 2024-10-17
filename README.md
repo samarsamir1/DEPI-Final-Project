@@ -2,11 +2,11 @@
 
 ## Walmart sales data analysis
 ## Prepared by (Dreamer Team)
-# Amna Ahmed Bakr
-# Naglaa Mahmoud
-# Samar Samir Youssef
-# Hadeer Ashraf Fathy
-# Hasnaa Sameh Abdelhamid
+### Amna Ahmed Bakr
+### Naglaa Mahmoud
+### Samar Samir Youssef
+### Hadeer Ashraf Fathy
+### Hasnaa Sameh Abdelhamid
 
 • Supervised by
 (Eng: Ahmed Moharram & Eng: Mohamed Anwar)
