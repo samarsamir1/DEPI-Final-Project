@@ -1,3 +1,5 @@
+-- # Build Data Model, Data Cleaning and Preprocessing
+
 create database if not exists WalmartSales ;
 
 use walmartSales ;
