@@ -39,7 +39,7 @@ The purpose of this analysis is to leverage Walmart's sales data to generate a c
 ## Steps in the Analysis:
 1. Data Cleaning and Preprocessing:
    
-+Review and clean the dataset (standardizing formats, handling missing data, correcting types)Remove outliers.
++ Review and clean the dataset (standardizing formats, handling missing data, correcting types)Remove outliers.
 
 2. Exploratory Data Analysis (EDA):
 
@@ -61,10 +61,10 @@ The purpose of this analysis is to leverage Walmart's sales data to generate a c
 
 5. Customer Behavior Analysis:
 
-• Study customer behavior, ratings, and preferences.
-• Assess demographic influence on purchasing decisions.
+- Study customer behavior, ratings, and preferences.
+- Assess demographic influence on purchasing decisions.
 
 6. Actionable Insights and Recommendations:
 
-• Summarize findings and provide recommendations for improving pricing, marketing, and inventory.
-• Suggest strategies for optimizing customer engagement and retention.
+- Summarize findings and provide recommendations for improving pricing, marketing, and inventory.
+- Suggest strategies for optimizing customer engagement and retention.
