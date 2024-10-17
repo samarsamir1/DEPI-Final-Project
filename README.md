@@ -8,9 +8,12 @@
 ### Hadeer Ashraf Fathy
 ### Hasnaa Sameh Abdelhamid
 
-• Supervised by
-(Eng: Ahmed Moharram & Eng: Mohamed Anwar)
-Group Code (Data Analyst Specialist_MIN1_DAT1_G1e)
+## Supervised by:
+
+### Eng: Ahmed Moharram
+### Eng: Mohamed Anwar
+
+## Group Code : Data Analyst Specialist (MIN1_DAT1_G1e)
 Introduction
 This project aims to analyze Walmart's sales data using a comprehensive dataset with 17 key columns, including details like invoice ID, customer demographics, product lines, and financial metrics. Through this analysis, we will uncover insights to help optimize operations, improve customer satisfaction, and boost profitability. The focus will be on identifying sales trends, key revenue drivers, and actionable recommendations for business improvement.
 Objective
