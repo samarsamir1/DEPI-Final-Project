@@ -4,7 +4,7 @@
 # "Walmart sales data analysis"
 ## Prepared by (Dreamer Team)
 ### Amna Ahmed Bakr
-### Naglaa Mahmoud
+### Naglaa Mahmoud Kamel
 ### Samar Samir Youssef
 ### Hadeer Ashraf Fathy
 ### Hasnaa Sameh Abdelhamid
