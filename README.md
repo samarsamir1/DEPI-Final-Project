@@ -1,12 +1,12 @@
 # DEPI-Final-Project
 
-Project name “Walmart sales data”
-• Prepared by (Dreamer Team)
-Amna Ahmed
-Naglaa Mahmoud
-Samar Samir
-Hadeer Ashraf
-Hasnaa Sameh
+## Walmart sales data analysis
+## Prepared by (Dreamer Team)
+# Amna Ahmed Bakr
+# Naglaa Mahmoud
+# Samar Samir Youssef
+# Hadeer Ashraf Fathy
+# Hasnaa Sameh Abdelhamid
 
 • Supervised by
 (Eng: Ahmed Moharram & Eng: Mohamed Anwar)
