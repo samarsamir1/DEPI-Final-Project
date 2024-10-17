@@ -31,13 +31,14 @@ The primary objective of this project is to analyze Walmart's sales data to iden
 ## Purpose
 The purpose of this analysis is to leverage Walmart's sales data to generate a clearer picture of its overall business performance and customer preferences. By providing detailed insights into sales trends, product demand, and customer segments, this project aims to help Walmart:
 
-• Improve sales forecasting and inventory management.
-• Optimize pricing strategies and promotions for different product lines.
-• Enhance customer engagement by tailoring marketing efforts based on customer profiles.
-• Improve operational efficiency across its branches to boost overall profitability.
+- Improve sales forecasting and inventory management.
+* Optimize pricing strategies and promotions for different product lines.
++ Enhance customer engagement by tailoring marketing efforts based on customer profiles.
+- Improve operational efficiency across its branches to boost overall profitability.
 
 ## Steps in the Analysis:
 1. Data Cleaning and Preprocessing:
+   
 Review and clean the dataset (standardizing formats, handling missing data, correcting types)
 Remove outliers.
 
