@@ -1,0 +1,173 @@
+create database if not exists WalmartSales ;
+
+use walmartSales ;
+-- CREATE TABLE
+create table if not exists sales (
+invoice_id varchar (30) not null primary key ,
+branch varchar (5) not null ,
+city varchar (30) not null ,
+customer_type varchar (30) not null ,
+gender varchar (30) not null ,
+product_line varchar (100) not null ,
+unit_price decimal (10,4 ) not null ,
+quantity int not null ,
+tax_pct float (6,4) not null ,
+total decimal (12,4) not null ,
+date datetime not null ,
+time time not null ,
+payment varchar (15) not null ,
+cogs decimal (10,2) not null ,
+gross_margin_pct float (11,9) ,
+gross_income decimal (12,4) ,
+rating float (2,1)
+);
+
+-- add the time_of_day column
+select time ,
+(CASE
+    WHEN time BETWEEN '00:00:00' AND '12:00:00' THEN 'Morning'
+    WHEN time BETWEEN '12:01:00' AND '16:00:00' THEN 'Afternoon'
+    ELSE 'Evening'
+    END) as time_of_day
+ from sales ;
+ 
+  alter table sales add column time_of_day varchar (20) ;
+
+UPDATE sales
+SET time_of_day = (
+    CASE
+    WHEN time BETWEEN '00:00:00' AND '12:00:00' THEN 'Morning'
+    WHEN time BETWEEN '12:01:00' AND '16:00:00' THEN 'Afternoon'
+    ELSE 'Evening'
+    END
+)
+WHERE time IS NOT NULL;
+
+-- add day_name column
+
+alter table sales add column day_name varchar(10) ;
+
+update sales
+set day_name = dayname(date);
+
+-- add month name
+
+select date , monthname(date) from sales ;
+
+alter table sales add column month_name varchar(10) ;
+
+update sales
+set month_name = monthname(date) ;
+select * from sales ;
+
+
+-- 1. Time-Based Analysis
+
+-- What are the peak times of the day for activity (e.g., sales, user interaction)?
+
+SELECT time_of_day, COUNT(*) AS activity_count
+FROM sales
+GROUP BY time_of_day
+ORDER BY activity_count DESC;
+
+-- Which days of the week have the highest/lowest activity?
+SELECT day_name, COUNT(*) AS activity_count
+FROM sales
+GROUP BY day_name
+ORDER BY activity_count DESC;
+
+-- Is there a noticeable trend in performance based on months?
+SELECT month_name, COUNT(*) AS activity_count
+FROM sales
+GROUP BY month_name
+ORDER BY activity_count DESC;
+
+-- 2. Product Performance
+-- Which product categories perform best in terms of sales or engagement?
+SELECT product_line, SUM(total) AS total_sales
+FROM sales
+GROUP BY product_line
+ORDER BY total_sales DESC;
+
+-- How does the performance of different products change across regions?
+SELECT product_line, city, SUM(total) AS total_sales
+FROM sales
+GROUP BY product_line, city
+ORDER BY total_sales DESC;
+
+-- Are there underperforming products?
+SELECT product_line, SUM(total) As total_sales
+FROM sales
+GROUP BY product_line
+HAVING sum(total) < (SELECT AVG(total) FROM sales);
+
+
+-- 3. Regional Performance
+-- How do different regions contribute to overall performance?
+SELECT city, SUM(total) AS total_sales
+FROM sales
+GROUP BY city
+ORDER BY total_sales DESC;
+
+
+-- Are there regions under-performing?
+SELECT city, SUM(total) AS total_sales
+FROM sales
+GROUP BY city
+HAVING SUM(total) < (
+    SELECT AVG(total_sales) 
+    FROM (
+        SELECT SUM(total) AS total_sales
+        FROM sales
+        GROUP BY city
+    ) AS city_totals
+);
+
+
+
+
+-- 4. Customer Behavior
+-- How often do repeat customers purchase products?
+
+SELECT customer_type, gender, COUNT(invoice_id) AS purchase_count
+FROM sales
+GROUP BY customer_type, gender
+HAVING purchase_count > 1;
+
+
+
+-- Average purchase size per customer
+SELECT customer_type, gender, AVG(total) AS avg_purchase
+FROM sales
+GROUP BY customer_type, gender
+ORDER BY avg_purchase DESC;
+
+
+-- 5. Revenue and Growth
+-- Revenue breakdown per month
+SELECT month_name, SUM(total) AS total_revenue
+FROM sales
+GROUP BY month_name, MONTH(date)
+ORDER BY MONTH(date);
+
+
+
+-- Growth rate month over month
+WITH monthly_sales AS (
+    SELECT month_name, MONTH(date) AS month_number, SUM(total) AS total_sales
+    FROM sales
+    GROUP BY month_name, month_number
+)
+SELECT month_name,
+       total_sales,
+       LAG(total_sales, 1) OVER (ORDER BY month_number) AS previous_month_sales,
+       (total_sales - LAG(total_sales, 1) OVER (ORDER BY month_number)) / NULLIF(LAG(total_sales, 1) OVER (ORDER BY month_number), 0) * 100 AS growth_rate
+FROM monthly_sales
+ORDER BY month_number;
+
+-- 6. Trend Analysis
+-- Identifying customer preferences over time
+SELECT product_line, COUNT(*) AS purchase_count, month_name
+FROM sales
+GROUP BY product_line, month_name
+ORDER BY purchase_count DESC;
