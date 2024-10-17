@@ -39,26 +39,25 @@ The purpose of this analysis is to leverage Walmart's sales data to generate a c
 ## Steps in the Analysis:
 1. Data Cleaning and Preprocessing:
    
-Review and clean the dataset (standardizing formats, handling missing data, correcting types)
-Remove outliers.
++Review and clean the dataset (standardizing formats, handling missing data, correcting types)Remove outliers.
 
 2. Exploratory Data Analysis (EDA):
 
-• Perform exploratory analysis to understand the data.
-• Generate summary statistics for key variables.
-• Visualize trends (e.g., sales by branch, city, product lines).
+- Perform exploratory analysis to understand the data.
+* Generate summary statistics for key variables.
++ Visualize trends (e.g., sales by branch, city, product lines).
 
 3. Segmentation and Trend Analysis:
 
-• Analyze sales by branch, city, and product line.
-• Segment customers by demographics and analyze purchasing patterns.
-• Evaluate payment method effectiveness.
+- Analyze sales by branch, city, and product line.
+* Segment customers by demographics and analyze purchasing patterns.
++ Evaluate payment method effectiveness.
 
 4. Pricing and Profitability Analysis:
 
-• Analyze unit price, quantity sold, and revenue.
-• Examine gross margin and income impact on profitability.
-• Identify the most profitable products and branches.
+- Analyze unit price, quantity sold, and revenue.
+- Examine gross margin and income impact on profitability.
+- Identify the most profitable products and branches.
 
 5. Customer Behavior Analysis:
 
