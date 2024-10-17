@@ -1,4 +1,5 @@
-# DEPI-Final-Project
+# DEPI-Final-Project Proposal
+
 
 # "Walmart sales data analysis"
 ## Prepared by (Dreamer Team)
